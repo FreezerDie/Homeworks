@@ -1,3 +1,4 @@
+using Library.DTO.Requests.Book;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Library.Controllers;
@@ -6,15 +7,21 @@ namespace Library.Controllers;
 [Route("api/[controller]")]
 public class BookController: ControllerBase
 {
-    [HttpPost("Book/Add")]
-    public IActionResult AddBook()
+    [HttpPost("Add")]
+    public async Task<IActionResult>  AddBook(AddBookRequest request)
     {
         return Ok("Book added!");
     }
 
-    [HttpPost("Book/Update")]
-    public IActionResult UpdateBook()
+    [HttpPost("Update")]
+    public async Task<IActionResult> UpdateBook(UpdateBookRequest request)
     {
         return Ok("Book updated!");
+    }
+
+    [HttpPost("Delete")]
+    public async Task<IActionResult> DeleteBook(FindDeleteBookRequest request)
+    {
+        return Ok("Book deleted!");
     }
 }
