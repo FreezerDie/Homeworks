@@ -8,7 +8,7 @@ public class WarehouseConfig : IEntityTypeConfiguration<Warehouse>
 {
     public void Configure(EntityTypeBuilder<Warehouse> builder)
     {
-        builder.HasKey(w => w.ProductId);
+        builder.HasKey(w => w.id);
 
         builder.Property(w => w.Count)
             .HasDefaultValue(0);

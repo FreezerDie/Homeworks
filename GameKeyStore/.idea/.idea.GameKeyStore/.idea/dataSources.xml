@@ -9,5 +9,13 @@
       <jdbc-url>Server=tcp:library-db-step.database.windows.net,1433;Initial Catalog=GameKeyStoreDB;Persist Security Info=False;User ID=FreezerDie;Password=r1Y9C4Z7;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="GameKeyStoreDB@library-db-step.database.windows.net" uuid="8f9ec6f2-adb6-4dd6-84de-72064332dcb8">
+      <driver-ref>azure.ms</driver-ref>
+      <synchronize>true</synchronize>
+      <configured-by-url>true</configured-by-url>
+      <jdbc-driver>com.microsoft.sqlserver.jdbc.SQLServerDriver</jdbc-driver>
+      <jdbc-url>jdbc:sqlserver://library-db-step.database.windows.net:1433;databaseName=GameKeyStoreDB;encrypt=True;password=r1Y9C4Z7;trustServerCertificate=False;userName=FreezerDie;</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>

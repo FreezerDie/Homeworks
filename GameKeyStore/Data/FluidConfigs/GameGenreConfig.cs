@@ -8,7 +8,8 @@ public class GameGenreConfig : IEntityTypeConfiguration<GameGenre>
 {
     public void Configure(EntityTypeBuilder<GameGenre> builder)
     {
-        builder.HasKey(gg => new { gg.GameRef, gg.GenreRef });
+        
+        builder.HasKey(gg => gg.id);
 
         builder.HasOne(gg => gg.Game)
             .WithMany()
